@@ -31,11 +31,10 @@
   <img src="/images/food1.jpg">
 
   <dl>
-    <dt>Channa Masala - 5.95</dt>
-    <dd>Yummy goodness</dd>
-    
-    <dt>Chicken Tikka Masala - 5.95</dt>
-    <dd>Yummy goodness</dd>
+    <% [Item.new("Channa Masala", 5.95, "Yummy goodness", "/images/food1.jpg"), Item.new("Chicken Tikka Masala", 5.95, "Yummy goodness", "/images/food2.jpg")].each do |item| %>
+      <dt><%= item.name %> - <%= item.price %></dt>
+      <dd><%= item.description %><img src = <%= item.image %>></dd>
+    <% end %>
   </dl>
 </main>
 
