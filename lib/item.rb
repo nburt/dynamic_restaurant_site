@@ -1,9 +1,9 @@
 class Item
-  attr_reader :name, :price, :description, :image
+  attr_reader :name, :description, :image
 
   def initialize(name, price, description, image)
     @name = name
-    @price = price
+    @price = price.to_f
     @description = description
     @image = image
   end
@@ -13,5 +13,13 @@ class Item
     self.price == other.price
     self.description == other.description
     self.image == other.image
+  end
+
+  def price(today = Date.today)
+    if today.wednesday?
+      @price = (@price * 0.9).round(2)
+    else
+      @price
+    end
   end
 end

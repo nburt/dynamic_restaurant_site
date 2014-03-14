@@ -1,6 +1,9 @@
 require 'item'
 
 class Menu
+  def initialize(file)
+    @file = file
+  end
   def items
     [
       Item.new("Channa Masala", 5.95, "Yummy goodness", "/images/food1.jpg"),

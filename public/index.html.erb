@@ -30,7 +30,7 @@
   </p>
 
   <dl>
-    <% Menu.new.items.each do |item| %>
+    <% Menu.new(File.expand_path("../dynamic_restaurant_site/config/menu.csv")).items.each do |item| %>
       <dt><%= item.name %> - <%= item.price %></dt><img src = <%= item.image %>></dd>
       <dd><%= item.description %>
     <% end %>
