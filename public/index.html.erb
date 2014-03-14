@@ -28,12 +28,11 @@
     idleness in the hold; and, to accelerate the affair, the blacksmith was commanded to
     proceed at once to the forging of whatever iron contrivances might be needed.
   </p>
-  <img src="/images/food1.jpg">
 
   <dl>
-    <% [Item.new("Channa Masala", 5.95, "Yummy goodness", "/images/food1.jpg"), Item.new("Chicken Tikka Masala", 5.95, "Yummy goodness", "/images/food2.jpg")].each do |item| %>
-      <dt><%= item.name %> - <%= item.price %></dt>
-      <dd><%= item.description %><img src = <%= item.image %>></dd>
+    <% Menu.new.items.each do |item| %>
+      <dt><%= item.name %> - <%= item.price %></dt><img src = <%= item.image %>></dd>
+      <dd><%= item.description %>
     <% end %>
   </dl>
 </main>
