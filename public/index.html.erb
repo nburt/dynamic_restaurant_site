@@ -31,7 +31,7 @@
 
   <dl>
     <% Menu.new(File.expand_path("./config/menu.csv")).items.each do |item| %>
-      <dt><%= item.name %> - <%= item.price %></dt><img src = <%= item.image %>></dd>
+      <dt><%= item.name %> - <%= item.price %></dt><img src = "images/<%= item.image %>"></dd>
       <dd><%= item.description %>
     <% end %>
   </dl>
