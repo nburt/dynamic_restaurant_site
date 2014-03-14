@@ -1,8 +1,8 @@
 require 'item'
 
 class Menu
-  def initialize(file)
-    @file = file
+  def initialize(file_to_import)
+    @file = file_to_import
   end
   def items
     [
