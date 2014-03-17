@@ -37,4 +37,5 @@ describe Item do
 
     expect(item.price(Date.new(2014,03,12))).to eq 5.36
   end
+
 end
