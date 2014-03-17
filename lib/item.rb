@@ -1,11 +1,12 @@
 class Item
-  attr_reader :name, :description, :image
+  attr_reader :name, :description, :image, :date
 
-  def initialize(name, price, description, image)
+  def initialize(name, price, description, image, date)
     @name = name
     @price = price.to_f
     @description = description
     @image = image
+    @date = date
   end
 
   def == (other)
@@ -13,6 +14,7 @@ class Item
     self.price == other.price
     self.description == other.description
     self.image == other.image
+    self.date == other.date
   end
 
   def price(today = Date.today)
