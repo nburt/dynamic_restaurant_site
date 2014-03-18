@@ -1,6 +1,7 @@
 require 'erb'
 require 'item'
 require 'menu'
+require 'featured_paragraph'
 
 class App
   def call(env)
